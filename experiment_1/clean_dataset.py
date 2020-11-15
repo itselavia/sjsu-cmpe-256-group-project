@@ -1,7 +1,6 @@
 import ast
 import json
 import re
-# This function will read the raw dataset file 'australian_users_items.json' and replace the single quotes to double quotes in order to make it a valid JSON
 def clean_data():
 
     with open("/Users/akshay/Downloads/australian_users_items 2.json", "r") as raw_input:
