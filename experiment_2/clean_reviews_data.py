@@ -6,6 +6,8 @@ def clean_review_data():
             try:
                 for line in raw_input:
                     withoutSingleQuotes = line.replace('\'', '\"')
+                    withoutSingleQuotes = withoutSingleQuotes.replace("True", "true")
+                    withoutSingleQuotes = withoutSingleQuotes.replace("False", "false")
                     main_review_indexes = [m.start() for m in re.finditer("\"review\"", withoutSingleQuotes)]
                     for main_review_index in main_review_indexes:
                         main_review_index = main_review_index + 11
@@ -15,6 +17,7 @@ def clean_review_data():
                         for i in repeatingDoubleQuotesIndexes:
                             toReplaceIndex = main_review_index + i
                             withoutSingleQuotes = withoutSingleQuotes[:toReplaceIndex] + "'" + withoutSingleQuotes[toReplaceIndex + 1:]
+                    withoutSingleQuotes = withoutSingleQuotes.replace("\\", "")
                     cleaned_file.write(withoutSingleQuotes)
             except:
                 pass
