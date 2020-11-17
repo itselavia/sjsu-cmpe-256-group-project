@@ -10,7 +10,7 @@ def generate_test_data():
                     review_text = review["review"]
                     sentiment = review["recommend"]
                     resultRows.append([review_text, sentiment])
-            except Exception as e:
+            except:
                 pass
                     
     with open("/Users/akshay/Downloads/experiment_2_sentiment_dataset.tsv", "w") as sentiment_dataset:
