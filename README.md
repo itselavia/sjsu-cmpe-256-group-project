@@ -1,5 +1,3 @@
-# sjsu-cmpe-256-group-project
-
 # Title: Generating Game Recommendations and Analyzing Feature Importance from Steam Dataset
 - Team Members:
   - Akshay Elavia
